@@ -10,7 +10,8 @@ normal-task/
 ├── templates/                   # 文書テンプレート
 │   ├── lesson_plan.md           # 授業計画書テンプレート
 │   ├── notice_letter.md         # 保護者向け通知文テンプレート
-│   └── meeting_minutes.md       # 会議議事録テンプレート
+│   ├── meeting_minutes.md       # 会議議事録テンプレート
+│   └── approval_request.md      # 稟議書テンプレート
 ├── scripts/                     # 自動化スクリプト
 │   └── grade_summary.py         # 成績集計スクリプト
 └── docs/                        # マニュアル・業務メモ
@@ -23,6 +24,7 @@ normal-task/
 - `lesson_plan.md` — 授業計画書のひな形。科目・単元・目標・展開を記入して使用
 - `notice_letter.md` — 保護者向けお便り・通知文のひな形
 - `meeting_minutes.md` — 職員会議・学年会議の議事録ひな形
+- `approval_request.md` — 稟議書のひな形。費用・見積もり比較・決裁欄付き
 
 ### スクリプト (`scripts/`)
 - `grade_summary.py` — CSVファイルから生徒の成績を集計・統計表示するPythonスクリプト
