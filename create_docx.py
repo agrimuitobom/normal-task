@@ -150,7 +150,7 @@ add_paragraph('　なし（既存のPCおよび無料AIツールを使用）', s
 add_paragraph('６．その他', size=11, bold=True, space_before=4, space_after=4)
 notes = [
     '参加は任意とし、事前申し込みは不要です。',
-    '使用するAIツール：ChatGPT（無料版）等、アカウント不要でも参加可能',
+    '使用するAIツール：Google Gemini（無料版）、Googleアカウントがあれば利用可能',
 ]
 for n in notes:
     p = doc.add_paragraph()
@@ -159,28 +159,6 @@ for n in notes:
     p.paragraph_format.left_indent = Cm(0.5)
     run = p.add_run(f'・　{n}')
     set_font(run, size=10.5)
-
-doc.add_paragraph('')
-
-# ========== 承認欄 ==========
-add_paragraph('承　認　欄', size=11, bold=True, space_before=8, space_after=4)
-approval_table = doc.add_table(rows=3, cols=4)
-approval_table.style = 'Table Grid'
-headers = ['校　長', '教　頭', '教務主任', '起案者']
-for i, h in enumerate(headers):
-    cell = approval_table.rows[0].cells[i]
-    p = cell.paragraphs[0]
-    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    p.paragraph_format.space_before = Pt(3)
-    p.paragraph_format.space_after = Pt(3)
-    run = p.add_run(h)
-    set_font(run, size=10.5, bold=True)
-# 空白行を２行
-for row in approval_table.rows[1:]:
-    for cell in row.cells:
-        p = cell.paragraphs[0]
-        p.paragraph_format.space_before = Pt(12)
-        p.paragraph_format.space_after = Pt(12)
 
 # 起案日（末尾）
 doc.add_paragraph('')
